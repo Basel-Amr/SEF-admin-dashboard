@@ -3,7 +3,7 @@
 A React + Vite admin dashboard organized for team collaboration,
 reusable UI, and feature-based development.
 
-**Repository:** https://github.com/jaff0040/clone-koda-dashboard\
+**Repository:** https://github.com/Basel-Amr/SEF-admin-dashboard
 **Project folder shown in VS Code:** `SEF-admin-dashboard`
 
 ## Table of Contents
@@ -54,13 +54,13 @@ npm --version
 ### 1. Clone the repository
 
 ``` bash
-git clone https://github.com/jaff0040/clone-koda-dashboard.git
+git clone https://github.com/Basel-Amr/SEF-admin-dashboard
 ```
 
 ### 2. Enter the project directory
 
 ``` bash
-cd clone-koda-dashboard
+cd SEF-admin-dashboard
 ```
 
 If your local folder has a different name, use the name shown by your
