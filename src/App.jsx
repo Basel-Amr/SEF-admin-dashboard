@@ -1,8 +1,9 @@
-import './clock.css'
-import WorldClock from './components/dashboard/WorldClock.jsx'
+import React from "react";
 
-function App() {
-  return <WorldClock />
+function App(){
+  return(
+    <div className="text-red-800 text-center text-5xl">APP</div>  
+  )
 }
 
 export default App
