@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@500;600;700&display=swap');
+
+@import 'tailwindcss';
+
+:root {
+  font-family: 'Manrope', sans-serif;
+  color: #f7d77a;
+  background:
+    linear-gradient(rgba(214, 180, 92, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(214, 180, 92, 0.055) 1px, transparent 1px),
+    #080806;
+  background-size: 28px 28px;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.world-clock {
+  --clock-face: #080806;
+  --clock-ink: #d6b45c;
+  --clock-accent: #f7d77a;
+  --clock-shadow: #8f742e;
+}
+
+.world-clock[data-theme='midnight'] {
+  --clock-face: #080806;
+  --clock-ink: #f1c75b;
+  --clock-accent: #fff1b8;
+  --clock-shadow: #74591d;
+}
+
+.world-clock[data-theme='heritage'] {
+  --clock-face: #10100d;
+  --clock-ink: #c79a35;
+  --clock-accent: #f6da91;
+  --clock-shadow: #58421e;
+}
+
+.clock-face {
+  width: min(72vh, 48vw);
+  container-type: inline-size;
+  border: 2px solid var(--clock-ink);
+  background: var(--clock-face);
+  box-shadow:
+    inset 0 0 0 10px var(--clock-face),
+    inset 0 0 0 11px rgba(23, 33, 29, 0.12),
+    8px 10px 0 var(--clock-shadow);
+}
+
+.clock-number {
+  --angle: calc(var(--clock-index) * 30deg);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  transform: translate(-50%, -50%) rotate(var(--angle)) translateY(-38.125cqw) rotate(calc(var(--angle) * -1));
+  font-family: 'DM Mono', monospace;
+  font-size: clamp(10px, 4cqw, 18px);
+}
+
+.clock-tick {
+  width: 1px;
+  height: 5px;
+  background: rgba(214, 180, 92, 0.32);
+  transform: rotate(var(--tick-angle)) translateY(-44.6875cqw);
+  transform-origin: 0 0;
+}
+
+.clock-tick-major {
+  width: 2px;
+  height: 10px;
+  background: #17211d;
+}
+
+.clock-hand {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform-origin: 50% 100%;
+  border-radius: 999px;
+  will-change: transform;
+}
+
+.hour-hand {
+  width: 2.5cqw;
+  height: 21.25cqw;
+  margin-left: -1.25cqw;
+  background: var(--clock-ink);
+}
+
+.minute-hand {
+  width: 1.5625cqw;
+  height: 31.875cqw;
+  margin-left: -0.78125cqw;
+  background: var(--clock-ink);
+}
+
+.second-hand {
+  width: 0.625cqw;
+  height: 35cqw;
+  margin-left: -0.3125cqw;
+  background: var(--clock-accent);
+}
+
+.clock-pin {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 5.625cqw;
+  height: 5.625cqw;
+  border: max(2px, 1.25cqw) solid var(--clock-face);
+  border-radius: 50%;
+  background: var(--clock-accent);
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 2px var(--clock-ink);
+}
+
+@media (max-width: 767px) {
+  .clock-face {
+    width: min(84vw, 58vh);
+  }
+}
