@@ -1,0 +1,39 @@
+
+/* STEP 1: Full-screen page */
+.nc-login-page {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+  background: var(--nc-dark-page);
+}
+
+/* STEP 2: The centered card */
+.nc-login-card {
+  width: 100%;
+  max-width: 500px;
+
+  padding: 40px;
+  border: 1px solid var(--nc-dark-border);
+  border-radius: 20px;
+
+  background: var(--nc-dark-card);
+  color: var(--nc-text);
+}
+
+/* Temporary text styling */
+.nc-login-card h1 {
+  margin: 0 0 12px;
+  color: var(--nc-primary);
+  font-size: 28px;
+}
+
+.nc-login-card p {
+  margin: 0;
+  color: var(--nc-dark-muted);
+}

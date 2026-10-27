@@ -1,1 +1,53 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800&display=swap");
 @import "tailwindcss";
+@import "./styles/theme.css";
+
+/* Consistent sizing across the entire application */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove browser default spacing */
+html,
+body,
+#root {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global typography and background */
+html {
+  font-family: var(--nc-font);
+  background: var(--nc-dark-page);
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--nc-font);
+  background: var(--nc-dark-page);
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  max-width: none;
+  text-align: left;
+}
+
+/* Form elements inherit the application's font */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+}

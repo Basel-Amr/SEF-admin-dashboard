@@ -33,7 +33,6 @@ import ForgotPassword from "../pages/ForgotPassword";
 import ResetPassword from "../pages/ResetPassword";
 
 // Public storefront — Customer-facing shopping pages
-import Home from "../pages/Home";
 import Products from "../pages/Products";
 import Product from "../pages/Product";
 import Carts from "../pages/Carts";
@@ -70,8 +69,8 @@ function AppRoutes() {
             Available to visitors and customers.
         ================================================== */}
 
-        {/* Home — Main Shoplyn landing page */}
-        <Route path="/" element={<Home />} />
+        {/* Login — Existing users sign in */}
+        <Route path = "/" element = {<Navigate to = "/login" replace />} />
 
         {/* Products — Browse the product catalog */}
         <Route path="/products" element={<Products />} />
