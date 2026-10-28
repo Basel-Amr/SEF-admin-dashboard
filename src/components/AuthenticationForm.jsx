@@ -14,7 +14,7 @@ function AuthenticationForm({
   return (
     <main className="min-h-screen bg-slate-950 px-6 py-12 text-slate-100">
       <div className="mx-auto max-w-xl">
-        <PageSection eyebrow="Shoplyn account" title={title} description={description}>
+        <PageSection eyebrow="NexCart account" title={title} description={description}>
           <form
             className="space-y-5 rounded-xl border border-slate-800 bg-slate-900 p-6"
             onSubmit={(event) => {

@@ -179,7 +179,7 @@ function Login() {
                   />
 
                   <span className="mt-1 text-3xl font-extrabold tracking-tight text-white">
-                    Nex<span className="text-[var(--nc-primary)]">Cart</span>
+                    Nex<span className="text-(--nc-primary)">Cart</span>
                   </span>
 
                   <span className="mt-1 text-[9px] font-semibold uppercase tracking-[0.28em] text-slate-500">
@@ -372,21 +372,9 @@ function Login() {
                 <span>Continue with Google</span>
               </button>
 
-              {/* REGISTER LINK */}
-              <p className="mt-5 text-center text-sm text-slate-400">
-                Don't have an account?{" "}
-
-                <Link
-                  to="/register"
-                  className="font-semibold text-[var(--nc-primary)] transition hover:text-cyan-300"
-                >
-                  Create an account
-                </Link>
-              </p>
-
               {/* SECURITY FOOTER */}
               <div className="mt-5 flex items-center justify-center gap-2 text-center text-xs text-slate-500">
-                <i className="fa-solid fa-shield-halved text-[var(--nc-primary)]" />
+                <i className="fa-solid fa-shield-halved text-(--nc-primary)" />
 
                 <span>
                   Protected access for authorized administrators.
